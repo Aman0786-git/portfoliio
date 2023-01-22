@@ -126,9 +126,27 @@ body {
   overflow-X: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #7284a8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1d222b;
+  border-radius: 100px;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
+  z-index: -10;
   background-color: #869cca;
 }
 
@@ -199,7 +217,7 @@ body {
 }
 
 .mf-cursor.-pointer:before {
-  opacity: 0.3;
+  opacity: 0.25;
   transform: scale(0.85);
 }
 .mf-cursor.-text:before {

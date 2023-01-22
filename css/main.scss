@@ -21,9 +21,29 @@ body{
     overflow-X: hidden;
 }
 
+html{
+    // scrollbar-color: $color-pri $color-text;
+    scroll-behavior: smooth;    
+}
+
+::-webkit-scrollbar{
+    width: 0.7rem;
+   
+}
+
+::-webkit-scrollbar-track{
+    // border-radius: 100%;
+    background-color: $color-head;
+}
+::-webkit-scrollbar-thumb {
+    // box-shadow: inset 0 0 6px rgba(138, 185, 224, 0.3);
+    background-color: $color-text;
+    border-radius: 100px;
+  }
 .container{
     width: 100vw;
     height: 100vh;
+    z-index: -10;
     background-color: $color-pri;
 }
 
@@ -79,6 +99,7 @@ body{
 
 }
 
+
 .main__section{
     position: absolute;
     background-color:$color-pri;
@@ -111,14 +132,10 @@ body{
     }
 }
 
-
-
-
-
 .mf-cursor{
     &.-pointer {
         &:before {
-            opacity: 0.3;
+            opacity: 0.25;
             transform:scale(0.85);
             // z-index: -1;
         }
