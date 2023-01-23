@@ -12,19 +12,34 @@
 <body>
   <div class="container">
     <header class="header">
-      <img src="./public/favicon.svg" class="header__logo" alt="logo">
+      <img src="./public/favicon.svg" class="header__logo " alt="logo">
       <span data-cursor-text="Hello!">Amanullah</span>
       <ul class="nav_items">
         <li class="nav_item"><a class="nav_link" href="#main">About</a></li>
-        <li class="nav_item"><a class="nav_link" href="#skill">Skills</a></li>
+        <li class="nav_item"><a class="nav_link" href="#experties">Experties</a></li>
         <li class="nav_item"><a class="nav_link" href="#project">Projects</a></li>
         <li class="nav_item"><a class="nav_link" href="#contact">Contact</a></li>
       </ul>
     </header>
     <section class="main__section" id="main">
-      <h1 class="bg_text">Page 1</h1>
+      <div class="name_Container">
+        <h3 class="hi">Hi, my name is</h3>
+        <h1 class="name">Mohd. Amanullah</h1>
+        <h3 class="hi build">I build things for the web.</h3>
+        <p> I am pursuing B.Tech. in Information Technology at the <span>
+            Haldia Institute of Technology.
+          </span>
+          i love building things
+        </p>
+
+      </div>
+      <h1 class="bg_text spin_msg">Give It A Spin</h1>
+      <canvas class="maingl">
+      </canvas>
+
+
     </section>
-    <section class="skill__section" id="skill">
+    <section class="skill__section" id="experties">
       <h1 class="bg_text">Page 2</h1>
     </section>
     <section class="skill__section" id="project">
@@ -35,6 +50,7 @@
     </section>
   </div>
   <script type="module" src="src/controller.js"></script>
+  <!-- <script type="module" src="src/view/main3d.js"></script> -->
 </body>
 
 </html>

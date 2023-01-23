@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@600&display=swap');
 @import "../node_modules/mouse-follower/src/scss/index.scss";
 
 $color-pri : #869cca;
@@ -17,7 +18,7 @@ align-items: center;
 }
 
 body{
-    cursor: default;
+    cursor:default;
     overflow-X: hidden;
 }
 
@@ -34,6 +35,8 @@ html{
 ::-webkit-scrollbar-track{
     // border-radius: 100%;
     background-color: $color-head;
+    // border: 2px solid rgba(140, 200, 211, 0.589);
+    box-shadow: 20px 20px 10px rgb(87, 79, 79) ;
 }
 ::-webkit-scrollbar-thumb {
     // box-shadow: inset 0 0 6px rgba(138, 185, 224, 0.3);
@@ -43,21 +46,22 @@ html{
 .container{
     width: 100vw;
     height: 100vh;
-    z-index: -10;
+    // z-index: -10;
     background-color: $color-pri;
 }
 
 .header{
-    position: absolute;
+    position: fixed;
+    z-index: 20;
     background-color: $color-head;
     color: $color-text;
     width: 100vw;
-    height: 3rem;
+    height: 4rem;
     display: flex;
     align-items: center;    
     // justify-content: space-around;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     letter-spacing: 0.1rem;
     font-weight: 700;
 
@@ -91,7 +95,7 @@ html{
             &:hover{
                 cursor: pointer;
                 transform: scale(1.1);
-                transition:transform 0.2s ease-in-out;
+                transition:transform 0.3s ease;
             }
 
         }
@@ -103,16 +107,70 @@ html{
 .main__section{
     position: absolute;
     background-color:$color-pri;
-    top: 3rem;
+    top: 4rem;
     width: 100vw;
     height: 100vh;
-
-    .bg_text{
-        position: absolute;
-        top: 50%;
-        text-align: center;
-        // position: relative;
+    user-select: none;
+    .name_Container{
+        
+        top: 20%;
+        left: 10%;
+        color:$color-text;
+        position: relative;
         // text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .hi{    
+            opacity: 0.8;
+            font-size: 1.5rem ;
+            // gap: 5rem;
+            // margin: 0.5rem 0;
+        }
+
+        .name{
+            // color: $color-text ;
+            line-height: 5rem;
+            text-transform:uppercase ;
+            letter-spacing: 0.15rem;
+            font-size: 4rem;
+        }
+
+        .build{
+            text-transform: capitalize;
+            font-size: 2rem;
+            opacity: 0.95;
+        }
+        p{  
+            // color: $color-text;
+            text-transform: capitalize;
+            width: 35%;
+            font-size: 1.3rem;
+            line-break: strict;
+            font-weight: 500;
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+    .maingl {
+        position: absolute;
+        top: -15%;
+        left: 15%;
+        z-index: 15;
+        // color: white;
+        background-color: rgba(0, 0, 0, 0);
+      }
+    .bg_text{
+        position: relative;
+        right: -20%;
+        color:$color-text;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Big Shoulders Text', cursive;
+        font-size: 4rem;
+        opacity: 0.3;
+      
     }
 }
 
@@ -123,28 +181,30 @@ html{
     width: 100vw;
     height: 100vh;
 
-    .bg_text{
-        position: absolute;
-        top: 50%;
-        text-align: center;
-        // position: relative;
-        // text-align: center;
-    }
+    // .bg_text{
+    //     position: absolute;
+    //     top: 50%;
+    //     text-align: center;
+    //     // position: relative;
+    //     // text-align: center;
+    // }
 }
 
 .mf-cursor{
+    color: $color-text;
     &.-pointer {
         &:before {
             opacity: 0.25;
-            transform:scale(0.85);
+            transform:scale(1);
             // z-index: -1;
         }
     }
 
     &.-text {
         &:before {
-            opacity:0.6;
-            transform:scale(1.4);
+            opacity:0.25;
+            transform:scale(1.3);
+            color: $color-text;
         }
 
         &.-active:before {
