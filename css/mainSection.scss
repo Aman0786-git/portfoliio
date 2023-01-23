@@ -1,0 +1,69 @@
+@import "./color.scss";
+.main__section{
+    position: absolute;
+    background-color:$color-pri;
+    top: 4rem;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    .name_Container{
+        z-index: 10;
+        top: 20%;
+        left: 10%;
+        color:$color-text;
+        position: relative;
+        // text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .hi{    
+            opacity: 0.8;
+            font-size: 1.5rem ;
+            // gap: 5rem;
+            // margin: 0.5rem 0;
+        }
+
+        .name{
+            // color: $color-text ;
+            line-height: 5rem;
+            text-transform:uppercase ;
+            letter-spacing: 0.15rem;
+            font-size: 4rem;
+        }
+
+        .build{
+            text-transform: capitalize;
+            font-size: 2rem;
+            opacity: 0.95;
+        }
+        p{  
+            // color: $color-text;
+            text-transform: capitalize;
+            width: 35%;
+            font-size: 1.3rem;
+            line-break: strict;
+            font-weight: 500;
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+    .maingl {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        z-index: 15;
+      }
+    .bg_text{
+        z-index: 4;
+        position: relative;
+        right: -20%;
+        color:$color-text;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Big Shoulders Text', cursive;
+        font-size: 4rem;
+        opacity: 0.27;
+      
+    }
+}

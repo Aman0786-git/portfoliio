@@ -11,7 +11,7 @@ const scene = new THREE.Scene();
 const geometry = new THREE.ConeGeometry(7, 7, 3, 1);
 
 const material = new THREE.MeshStandardMaterial({
-  color: "#869cca",
+  color: "red",
   roughness: 0.5,
   wireframe: true,
 });
@@ -20,7 +20,7 @@ scene.add(mesh);
 
 // Sizes
 const sizes = {
-  width: window.innerWidth / 2,
+  width: window.innerWidth / 2.5,
   height: window.innerHeight / 1.5,
 };
 
@@ -82,33 +82,30 @@ mainglEl.addEventListener("mousedown", () => (mouseDown = true));
 mainglEl.addEventListener("mouseup", () => (mouseDown = false));
 const ColChange = (e) => {
   rgb = [
-    Math.round(1 + ((e.pageX / sizes.width) * 258) / 2),
-    Math.round(1 + ((e.pageY / sizes.width) * 258) / 2),
-    258 / 2 + 1,
+    Math.round(((e.pageX / sizes.width) * 258) / 2),
+    Math.round(((e.pageY / sizes.width) * 258) / 2),
+    258 / 2,
   ];
 
   //  Animate
-
   let newColor = new THREE.Color(`rgb(${rgb.join(",")})`);
-  gsap.to(mesh.material.color, {
-    r: newColor.r,
-    g: newColor.g,
-    b: newColor.b,
-  });
+  //   gsap.to(mesh.material.color, {
+  //     r: newColor.r,
+  //     g: newColor.g,
+  //     b: newColor.b,
+  //   });
 
   gsap.to(".spin_msg", {
     color: `rgb(${rgb.join(",")})`,
   });
 };
 
-window.addEventListener("mousemove", (e) => {
-  //   console.log("1:", e);
+mainglEl.addEventListener("mousemove", (e) => {
   if (mouseDown) {
-    // console.log("2:", e);
     ColChange(e);
   }
 });
-window.addEventListener("touchstart", (e) => {
+mainglEl.addEventListener("touchstart", (e) => {
   const [el] = e.touches;
   ColChange(el);
 });

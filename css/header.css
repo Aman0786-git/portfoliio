@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  z-index: 20;
+  background-color: #7284a8;
+  color: #1d222b;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+.header__logo {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  display: block;
+  width: 1.5rem;
+}
+.header .nav_items {
+  position: relative;
+  left: 60%;
+  display: flex;
+  align-items: center;
+}
+.header .nav_items .nav_item {
+  margin: 0 0.7rem;
+  list-style: none;
+}
+.header .nav_items .nav_item a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #1d222b;
+}
+.header .nav_items .nav_item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}/*# sourceMappingURL=header.css.map */
