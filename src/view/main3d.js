@@ -1,15 +1,14 @@
 import * as THREE from "three";
-// import "./style.css";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import gsap from "gsap";
+// import cursor from "./cursor";
 
-// const listEl = document.querySelector(".list");
-const spinEl = document.querySelector(".spin_msg");
+const mainglEl = document.querySelector(".maingl");
 // Scene
 const scene = new THREE.Scene();
 
 // Create Sphere
-const geometry = new THREE.ConeGeometry(9, 8, 3, 1);
+const geometry = new THREE.ConeGeometry(7, 7, 3, 1);
 
 const material = new THREE.MeshStandardMaterial({
   color: "#869cca",
@@ -21,8 +20,8 @@ scene.add(mesh);
 
 // Sizes
 const sizes = {
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: window.innerWidth / 2,
+  height: window.innerHeight / 1.5,
 };
 
 //Light
@@ -38,7 +37,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   100
 );
-camera.position.z = 40;
+camera.position.z = 30;
 scene.add(camera);
 
 //Renderer
@@ -47,7 +46,7 @@ const canvas = document.querySelector(".maingl");
 const renderer = new THREE.WebGLRenderer({ canvas }, { alpha: true });
 renderer.setClearColor(0x00, 0);
 renderer.setSize(sizes.width, sizes.height);
-renderer.setPixelRatio(3);
+renderer.setPixelRatio(1);
 renderer.render(scene, camera);
 
 // Controls
@@ -61,44 +60,35 @@ controls.autoRotateSpeed = 1;
 // Resize
 window.addEventListener("resize", () => {
   // Update Sizes
-  //   console.log(window.innerHeight, window.innerWidth);
-  sizes.width = window.innerWidth;
-  sizes.height = window.innerHeight;
+  sizes.width = window.innerWidth / 2;
+  sizes.height = window.innerHeight / 2;
 
   // Update Camera
   camera.aspect = sizes.width / sizes.height;
   camera.updateProjectionMatrix();
   renderer.setSize(sizes.width, sizes.height);
 });
-
+const t1 = gsap.timeline({ defaults: { duration: 1 } });
+t1.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
 export const loop = () => {
   controls.update();
   renderer.render(scene, camera);
   window.requestAnimationFrame(loop);
 };
-// loop();
-
-// const hoverChange = function () {
-//   spinEl.addEventListener("mouseenter", () => {
-//     spinEl.style.color = "whitesmoke";
-//   });
-//   spinEl.addEventListener("mouseout", () => {
-//     spinEl.style.color = `rgb(${rgb.join(",")})`;
-//   });
-// };
 
 let mouseDown = false;
 let rgb = [];
-window.addEventListener("mousedown", () => (mouseDown = true));
-window.addEventListener("mouseup", () => (mouseDown = false));
+mainglEl.addEventListener("mousedown", () => (mouseDown = true));
+mainglEl.addEventListener("mouseup", () => (mouseDown = false));
 const ColChange = (e) => {
   rgb = [
     Math.round(1 + ((e.pageX / sizes.width) * 258) / 2),
     Math.round(1 + ((e.pageY / sizes.width) * 258) / 2),
-    1 + 258 / 2,
+    258 / 2 + 1,
   ];
 
   //  Animate
+
   let newColor = new THREE.Color(`rgb(${rgb.join(",")})`);
   gsap.to(mesh.material.color, {
     r: newColor.r,
@@ -112,12 +102,20 @@ const ColChange = (e) => {
 };
 
 window.addEventListener("mousemove", (e) => {
+  //   console.log("1:", e);
   if (mouseDown) {
+    // console.log("2:", e);
     ColChange(e);
-    hoverChange();
   }
 });
 window.addEventListener("touchstart", (e) => {
   const [el] = e.touches;
   ColChange(el);
+});
+
+mainglEl.addEventListener("mouseover", (e) => {
+  //   console.log(e.target);
+  // console.log(cursor);
+  if (!mouseDown) mainglEl.setAttribute("data-cursor-text", "Drag");
+  else mainglEl.removeAttribute("data-cursor-text");
 });

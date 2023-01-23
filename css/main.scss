@@ -112,7 +112,7 @@ html{
     height: 100vh;
     user-select: none;
     .name_Container{
-        
+        z-index: 10;
         top: 20%;
         left: 10%;
         color:$color-text;
@@ -155,13 +155,12 @@ html{
     }
     .maingl {
         position: absolute;
-        top: -15%;
-        left: 15%;
+        top: 10%;
+        right: 10%;
         z-index: 15;
-        // color: white;
-        background-color: rgba(0, 0, 0, 0);
       }
     .bg_text{
+        z-index: 4;
         position: relative;
         right: -20%;
         color:$color-text;
@@ -169,7 +168,7 @@ html{
         text-transform: uppercase;
         font-family: 'Big Shoulders Text', cursive;
         font-size: 4rem;
-        opacity: 0.3;
+        opacity: 0.27;
       
     }
 }
