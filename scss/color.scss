@@ -1,0 +1,10 @@
+$color-pri: #869cca;
+$color-head: #8293b6;
+$color-text: #1d222b;
+$color-big: #59616e;
+// $color-skill:#798bb6;
+
+@mixin display {
+  display: flex;
+  align-items: center;
+}

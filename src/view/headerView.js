@@ -1,6 +1,6 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
 
 class bodyAnim {
   navEl = document.querySelector(".nav_item");
@@ -40,26 +40,12 @@ class bodyAnim {
   }
 
   aboutAnim() {
-    const t2 = gsap.timeline({ defaults: { duration: 1 } });
-    // t2.fromTo(
-    //   ".hi",
-    //   {
-    //     opacity: 0,
-    //   },
-    //   { opacity: 1, ease: "power2.in", duration: 1 }
-    // )
-    //   .fromTo(
-    //     ".name",
-    //     {
-    //       opacity: 0,
-    //     },
-    //     { opacity: 1, ease: "power2.in", duration: 1 }
-    //   )
-    //   .fromTo(
-    //     ".maingl",
-    //     { opacity: 0 },
-    //     { opacity: 1, ease: "back", duration: 0.5 }
-    //   );
+    const t2 = gsap.timeline({ defaults: { duration: 3 } });
+    t2.fromTo(".skill_text", { x: "-200" }, { x: "0", duration: 1.3 }).fromTo(
+      ".skill_items",
+      { x: "200", opacity: 1 },
+      { x: "0", opacity: 1, duration: 1.3 }
+    );
   }
 }
 

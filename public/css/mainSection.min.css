@@ -22,9 +22,10 @@
 .main__section .name_Container .hi {
   opacity: 0.8;
   font-size: 1.5rem;
+  margin-top: 1rem;
 }
 .main__section .name_Container .name {
-  line-height: 5rem;
+  line-height: 4.2rem;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   font-size: 4rem;
@@ -35,10 +36,12 @@
   opacity: 0.95;
 }
 .main__section .name_Container p {
+  margin-top: 20px;
   text-transform: capitalize;
   width: 35%;
   font-size: 1.3rem;
   line-break: strict;
+  line-height: 2.3rem;
   font-weight: 500;
 }
 .main__section .name_Container p span {
@@ -46,7 +49,7 @@
 }
 .main__section .maingl {
   position: absolute;
-  top: 10%;
+  top: 30%;
   right: 10%;
   z-index: 15;
 }
@@ -58,6 +61,19 @@
   text-align: center;
   text-transform: uppercase;
   font-family: "Big Shoulders Text", cursive;
-  font-size: 4rem;
+  font-size: 3rem;
   opacity: 0.27;
-}/*# sourceMappingURL=mainSection.css.map */
+}
+.main__section .about {
+  letter-spacing: 0.2rem;
+  opacity: 0.3;
+  font-family: "Big Shoulders Text", cursive;
+  font-size: 4.2rem;
+  font-weight: 800;
+  position: absolute;
+  color: #59616e;
+  text-transform: uppercase;
+  text-align: center;
+  left: 10%;
+  top: 10%;
+}

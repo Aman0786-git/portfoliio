@@ -4,55 +4,86 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./public/css/main.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev-AMAN</title>
+  <title>Dev</title>
 </head>
 
 <body>
-  <div class="loader hidden">
+  <!-- <div class="loader hidden">
     <div class="cssload-loader " data-cursor-text="Loading...">
       <div class="cssload-inner cssload-one"></div>
       <div class="cssload-inner cssload-two"></div>
       <div class="cssload-inner cssload-three"></div>
     </div>
-  </div>
+  </div> -->
   <div class="container">
-    <header class="header">
+    <header class="header ">
       <img src="./public/favicon.svg" class="header__logo " alt="logo">
       <span data-cursor-text="Hello!">Amanullah</span>
       <ul class="nav_items">
-        <li class="nav_item"><a class="nav_link" href="#main">About</a></li>
+        <li class="nav_item"><a class="nav_link" href="#">About</a></li>
         <li class="nav_item"><a class="nav_link" href="#experties">Experties</a></li>
         <li class="nav_item"><a class="nav_link" href="#project">Projects</a></li>
         <li class="nav_item"><a class="nav_link" href="#contact">Contact</a></li>
       </ul>
     </header>
     <section class="main__section" id="main">
+      <h1 class="about">ABOUT</h1>
       <div class="name_Container">
         <h3 class="hi">Hi, my name is</h3>
         <h1 class="name">Mohd. Amanullah</h1>
         <h3 class="hi build">I build things for the web.</h3>
-        <p> I am pursuing B.Tech. in Information Technology at the <span>
+        <p> I am pursuing B.Tech. in Information Technology at the
+          <span>
             Haldia Institute of Technology.
           </span>
-          i love building things
+          I like to code things from scratch, and enjoy bringing ideas to life in the browser
         </p>
-
       </div>
       <h1 class="bg_text spin_msg">Give It A Spin</h1>
-      <canvas class="maingl">
-      </canvas>
-
-
+      <canvas class="maingl"></canvas>
     </section>
+
+
     <section class="skill__section" id="experties">
-      <h1 class="bg_text">Page 2</h1>
+      <div class="skill_container">
+        <h1 class="about skill_text">Experties</h1>
+        <div class="skill_items">
+          <div class="dev_container ">
+            <h1 class="dev">Web Development</h1>
+            <div class="skill">
+              <img class="skill_img" src="./img/lang/html.png" alt="" srcset="">
+              Html5
+            </div>
+            <div class="skill"><img class="skill_img" src="./img/lang/css.png" alt="" srcset="">css3</div>
+            <div class="skill"><img class="skill_img" src="./img/lang/js.png" alt="" srcset="">js</div>
+            <div class="skill"><img class="skill_img" src="./img/lang/three.png" alt="" srcset="">Three Js</div>
+          </div>
+          <div class="lang_container dev_container ">
+            <h1 class="lang">Languages</h1>
+            <div class="skill"><img class="skill_img" src="./img/lang/cpp.png" alt="" srcset="">c/c++</div>
+            <div class="skill"><img class="skill_img" src="./img/lang/algo.png" alt="" srcset="">dsa</div>
+            <div class="skill"><img class="skill_img" src="./img/lang/java.png" alt="" srcset="">Java</div>
+            <div class="skill"><img class="skill_img" src="./img/lang/py.png" alt="" srcset="">Python</div>
+          </div>
+        </div>
+        <!-- <ul class="skill_items">
+          <li class="skill">HTML5</li>
+          <li class="skill">CSS3/SCSS</li>
+          <li class="skill">Javascript</li>
+          <li class="skill">C/C++</li>
+          <li class="skill">DSA</li>
+          <li class="skill">Java</li>
+          <li class="skill">Python</li>
+        </ul> -->
+      </div>
+
     </section>
-    <section class="skill__section" id="project">
+    <section class="project__section skill__section" id="project">
       <h1 class="bg_text">Page 3</h1>
     </section>
-    <section class="skill__section" id="contact">
+    <section class="contact__section" id="contact">
       <h1 class="bg_text">Page 4</h1>
     </section>
   </div>

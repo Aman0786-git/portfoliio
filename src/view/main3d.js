@@ -21,7 +21,7 @@ scene.add(mesh);
 // Sizes
 const sizes = {
   width: window.innerWidth / 2.5,
-  height: window.innerHeight / 1.5,
+  height: window.innerHeight / 1.8,
 };
 
 //Light
@@ -37,7 +37,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   100
 );
-camera.position.z = 30;
+camera.position.z = 40;
 scene.add(camera);
 
 //Renderer
@@ -55,7 +55,7 @@ controls.enableDamping = true;
 controls.enablePan = false;
 controls.enableZoom = false;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 1;
+controls.autoRotateSpeed = 2;
 
 // Resize
 window.addEventListener("resize", () => {
@@ -88,7 +88,7 @@ const ColChange = (e) => {
   ];
 
   //  Animate
-  let newColor = new THREE.Color(`rgb(${rgb.join(",")})`);
+  // let newColor = new THREE.Color(`rgb(${rgb.join(",")})`);
   //   gsap.to(mesh.material.color, {
   //     r: newColor.r,
   //     g: newColor.g,
