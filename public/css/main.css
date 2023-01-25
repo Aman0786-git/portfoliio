@@ -1,5 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@600&display=swap");
+.header {
+  position: fixed;
+  z-index: 20;
+  color: #1d222b;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700; }
+  .header__logo {
+    padding: 0.5rem;
+    margin-left: 1rem;
+    display: block;
+    width: 1.5rem; }
+  .header .nav_items {
+    position: relative;
+    left: 60%;
+    display: flex;
+    align-items: center; }
+    .header .nav_items .nav_item {
+      margin: 0 0.7rem;
+      list-style: none; }
+      .header .nav_items .nav_item a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        color: #1d222b; }
+      .header .nav_items .nav_item:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.3s ease; }
+
+.glass {
+  background: rgba(130, 147, 182, 0.1);
+  backdrop-filter: blur(4px);
+  border-bottom: 1.5px solid rgba(29, 34, 43, 0.3); }
+
 .mf-cursor {
   position: fixed;
   top: 0;
@@ -100,13 +139,14 @@
   .mf-cursor.-pointer:before {
     opacity: 0.25;
     transform: scale(1); }
-  .mf-cursor.-text:before {
-    opacity: 0.25;
-    transform: scale(1.3);
+  .mf-cursor.-text {
     color: #1d222b; }
-  .mf-cursor.-text.-active:before {
-    transform: scale(1.6);
-    transition-duration: 0.2s; }
+    .mf-cursor.-text:before {
+      opacity: 0.5;
+      transform: scale(1.3); }
+    .mf-cursor.-text.-active:before {
+      transform: scale(1.6);
+      transition-duration: 0.2s; }
 
 .main__section {
   position: absolute;
@@ -200,7 +240,6 @@
       position: relative;
       color: #59616e;
       right: -20%;
-      top: 0%;
       text-align: center;
       text-transform: uppercase; }
     .skill__section .skill_container .skill_items {
@@ -228,7 +267,6 @@
           height: 3rem;
           filter: brightness(90%); }
       .skill__section .skill_container .skill_items .dev {
-        display: inline-block;
         letter-spacing: 0.1rem;
         opacity: 0.9;
         font-size: 2.5rem;
@@ -247,45 +285,52 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start; }
+        .skill__section .skill_container .skill_items .dev_container .progress-line {
+          position: relative;
+          height: 12px;
+          width: 100%;
+          opacity: 0.8;
+          background: #59616e;
+          border-radius: 50px;
+          box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.05); }
+          .skill__section .skill_container .skill_items .dev_container .progress-line span {
+            opacity: 1;
+            border-radius: 50px;
+            height: 100%;
+            width: 80%;
+            position: absolute;
+            background-color: #1d222b; }
 
-.header {
-  position: fixed;
-  z-index: 20;
-  color: #1d222b;
+.project__section {
+  top: 100%;
   width: 100vw;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  letter-spacing: 0.1rem;
-  font-weight: 700; }
-  .header__logo {
-    padding: 0.5rem;
-    margin-left: 1rem;
-    display: block;
-    width: 1.5rem; }
-  .header .nav_items {
+  height: 100vh;
+  position: relative;
+  background-color: #869cca; }
+  .project__section .project_text {
+    letter-spacing: 0.2rem;
+    opacity: 0.5;
+    font-family: "Big Shoulders Text", cursive;
+    font-size: 4.2rem;
+    font-weight: 800;
     position: relative;
-    left: 60%;
+    color: #59616e;
+    left: -20%;
+    top: 10%;
+    text-align: center;
+    text-transform: uppercase; }
+  .project__section .project_container {
+    height: 80vh;
+    top: 12%;
+    margin: 0 2rem;
     display: flex;
-    align-items: center; }
-    .header .nav_items .nav_item {
-      margin: 0 0.7rem;
-      list-style: none; }
-      .header .nav_items .nav_item a {
-        font-size: 0.8rem;
-        text-decoration: none;
-        color: #1d222b; }
-      .header .nav_items .nav_item:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: transform 0.3s ease; }
-
-.glass {
-  background: rgba(130, 147, 182, 0.1);
-  backdrop-filter: blur(4px);
-  border-bottom: 1.5px solid rgba(29, 34, 43, 0.3); }
+    position: relative;
+    align-items: flex-start;
+    border: 2px solid black;
+    padding: 1rem; }
+    .project__section .project_container .music_player {
+      padding: 5rem;
+      border: 2px solid black; }
 
 * {
   font-family: "Poppins", sans-serif;
@@ -313,7 +358,4 @@ html {
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: #869cca; }
-
-.project__section {
   background-color: #869cca; }

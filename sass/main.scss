@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@600&display=swap");
 // @import "./loader.scss";
 @import "./color.scss";
+@import "./header.scss";
 @import "./cursor.scss";
 @import "./mainSection.scss";
 @import "./skillSection.scss";
-@import "./header.scss";
-// @import "../node_modules/mouse-follower/src/scss/index.scss";
+@import "./projectSection.scss";
 
 * {
   font-family: "Poppins", sans-serif;
@@ -42,9 +42,5 @@ html {
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: $color-pri;
-}
-
-.project__section {
   background-color: $color-pri;
 }

@@ -1,5 +1,7 @@
-const skillEl = document.querySelector(".skill");
+const htmlEl = document.querySelector(".html");
 
-skillEl.addEventListener("mouseenter", (e) => {
+htmlEl.addEventListener("mouseenter", (e) => {
   console.log(e.target);
+  // htmlEl.textContent = "70%";
+  console.log();
 });
