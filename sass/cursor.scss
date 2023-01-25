@@ -1,0 +1,26 @@
+@import "./color.scss";
+@import "../node_modules/mouse-follower/src/scss/index.scss";
+
+.mf-cursor {
+  color: $color-text;
+  &.-pointer {
+    &:before {
+      opacity: 0.25;
+      transform: scale(1);
+      // z-index: -1;
+    }
+  }
+
+  &.-text {
+    &:before {
+      opacity: 0.25;
+      transform: scale(1.3);
+      color: $color-text;
+    }
+
+    &.-active:before {
+      transform: scale(1.6);
+      transition-duration: 0.2s;
+    }
+  }
+}

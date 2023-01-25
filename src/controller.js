@@ -16,7 +16,7 @@ const headerEl = document.querySelector(".header");
 const glassEl = document.querySelector(".glass");
 window.addEventListener("scroll", () => {
   const { top } = containerEl.getBoundingClientRect();
-  console.log(top);
+  // console.log(top);
   if (top <= -144) {
     // if (!headerEl.classList.contains("glass")) return;
     headerEl.classList.add("glass");
@@ -30,5 +30,3 @@ window.addEventListener("scroll", () => {
   //   bodyAnim.aboutAnim();
   // }
 });
-
-window.onload();

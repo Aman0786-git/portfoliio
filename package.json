@@ -6,7 +6,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sass": "node-sass -w sass/ -o public/css/"
   },
   "devDependencies": {
     "vite": "^4.0.0"
@@ -14,6 +15,7 @@
   "dependencies": {
     "gsap": "^3.11.4",
     "mouse-follower": "^1.1.2",
+    "node-sass": "^8.0.0",
     "sass": "^1.57.1",
     "three": "^0.148.0"
   }

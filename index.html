@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
-  <link rel="stylesheet" href="./public/css/main.min.css">
+  <link rel="stylesheet" href="./public/css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dev</title>
 </head>
@@ -20,7 +20,7 @@
   <div class="container">
     <header class="header ">
       <img src="./public/favicon.svg" class="header__logo " alt="logo">
-      <span data-cursor-text="Hello!">Amanullah</span>
+      <span data-cursor-text="Hello!">&lt;/Aman&gt;</span>
       <ul class="nav_items">
         <li class="nav_item"><a class="nav_link" href="#">About</a></li>
         <li class="nav_item"><a class="nav_link" href="#experties">Experties</a></li>
@@ -52,20 +52,22 @@
         <div class="skill_items">
           <div class="dev_container ">
             <h1 class="dev">Web Development</h1>
-            <div class="skill">
-              <img class="skill_img" src="./img/lang/html.png" alt="" srcset="">
+            <div class="skill html">
+              <img class="skill_img hover " src="./img/lang/html.png" alt="" srcset="">
               Html5
             </div>
-            <div class="skill"><img class="skill_img" src="./img/lang/css.png" alt="" srcset="">css3</div>
-            <div class="skill"><img class="skill_img" src="./img/lang/js.png" alt="" srcset="">js</div>
-            <div class="skill"><img class="skill_img" src="./img/lang/three.png" alt="" srcset="">Three Js</div>
+            <div class="skill css"><img class="skill_img hover " src="./img/lang/css.png" alt="" srcset="">css3</div>
+            <div class="skill js"><img class="skill_img hover " src="./img/lang/js.png" alt="" srcset="">js</div>
+            <div class="skill three"><img class="skill_img hover " src="./img/lang/three.png" alt="" srcset="">Three.Js
+            </div>
           </div>
           <div class="lang_container dev_container ">
             <h1 class="lang">Languages</h1>
-            <div class="skill"><img class="skill_img" src="./img/lang/cpp.png" alt="" srcset="">c/c++</div>
-            <div class="skill"><img class="skill_img" src="./img/lang/algo.png" alt="" srcset="">dsa</div>
-            <div class="skill"><img class="skill_img" src="./img/lang/java.png" alt="" srcset="">Java</div>
-            <div class="skill"><img class="skill_img" src="./img/lang/py.png" alt="" srcset="">Python</div>
+            <div class="skill cpp"><img class="skill_img hover " src="./img/lang/cpp.png" alt="" srcset="">c/c++</div>
+            <div class="skill dsa"><img class="skill_img hover " src="./img/lang/algo.png" alt="" srcset="">dsa</div>
+            <div class="skill java"><img class="skill_img hover " src="./img/lang/java.png" alt="" srcset="">Java</div>
+            <div class="skill python"><img class="skill_img hover " src="./img/lang/py.png" alt="" srcset="">Python
+            </div>
           </div>
         </div>
         <!-- <ul class="skill_items">
@@ -88,8 +90,7 @@
     </section>
   </div>
   <script type="module" src="src/controller.js"></script>
-
-  <!-- <script type="module" src="src/view/main3d.js"></script> -->
+  <script src="src/view/hoverSkill.js"></script>
 </body>
 
 </html>
