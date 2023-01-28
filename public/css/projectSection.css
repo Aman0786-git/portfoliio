@@ -3,28 +3,145 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-color: #869cca; }
+  background-color: #869cca;
+  z-index: -2; }
   .project__section .project_text {
     letter-spacing: 0.2rem;
-    opacity: 0.5;
+    opacity: 0.3;
     font-family: "Big Shoulders Text", cursive;
     font-size: 4.2rem;
     font-weight: 800;
     position: relative;
     color: #59616e;
-    left: -20%;
-    top: 10%;
-    text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    left: 10%;
+    top: 10%; }
   .project__section .project_container {
     height: 80vh;
+    background-color: #869cca;
+    height: fit-content;
+    width: 100vw;
     top: 12%;
-    margin: 0 2rem;
     display: flex;
     position: relative;
     align-items: flex-start;
-    border: 2px solid black;
     padding: 1rem; }
-    .project__section .project_container .music_player {
-      padding: 5rem;
-      border: 2px solid black; }
+    .project__section .project_container .project_list {
+      width: 100vw;
+      margin: 0 2rem; }
+      .project__section .project_container .project_list .music_player_name {
+        position: relative;
+        text-transform: uppercase;
+        color: #1d222b;
+        margin: 10px;
+        left: 0;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 800;
+        cursor: pointer; }
+        .project__section .project_container .project_list .music_player_name span {
+          color: #1d222b;
+          opacity: 0.5;
+          font-size: 2.6rem; }
+      .project__section .project_container .project_list .music_player img {
+        display: flex;
+        margin: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 20%;
+        position: relative;
+        border: 2px solid rgba(0, 0, 0, 0.226);
+        border-radius: 20px; }
+      .project__section .project_container .project_list .music_player .img1 {
+        float: left;
+        margin-top: 1rem; }
+      .project__section .project_container .project_list .music_player .img2 {
+        transform: translate(-22%, 20%);
+        float: right; }
+      .project__section .project_container .project_list .music_player p {
+        position: relative;
+        line-break: strict;
+        width: 55%;
+        font-size: 1.3rem; }
+      .project__section .project_container .project_list .music_player .para1 {
+        transform: translate(2%, 20%); }
+      .project__section .project_container .project_list .music_player .para2 {
+        left: 23%;
+        transform: translate(-8%, 50%); }
+      .project__section .project_container .project_list .razer {
+        position: relative;
+        width: 100vw;
+        top: 100%;
+        left: 0;
+        margin-top: 7%; }
+        .project__section .project_container .project_list .razer_name {
+          position: relative;
+          top: 7%;
+          left: 3%;
+          text-transform: uppercase;
+          color: #1d222b;
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: 800;
+          cursor: pointer; }
+          .project__section .project_container .project_list .razer_name span {
+            color: #1d222b;
+            opacity: 0.5;
+            font-size: 2.6rem; }
+        .project__section .project_container .project_list .razer img {
+          display: flex;
+          margin: 1rem;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          transition: 0.3s;
+          width: 40%;
+          height: 45%;
+          position: relative;
+          border-radius: 20px; }
+        .project__section .project_container .project_list .razer .img1 {
+          float: left;
+          transform: translate(7%, 13%); }
+        .project__section .project_container .project_list .razer .img2 {
+          transform: translate(30%, 60%); }
+        .project__section .project_container .project_list .razer p {
+          position: absolute;
+          line-break: strict;
+          width: 45%;
+          font-size: 1.3rem; }
+        .project__section .project_container .project_list .razer .para1 {
+          transform: translate(14%, 100%); }
+      .project__section .project_container .project_list .sphere {
+        position: relative; }
+        .project__section .project_container .project_list .sphere_name {
+          position: absolute;
+          top: 24%;
+          left: 3%;
+          text-transform: uppercase;
+          color: #1d222b;
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: 800;
+          text-align: start;
+          cursor: pointer; }
+          .project__section .project_container .project_list .sphere_name span {
+            color: #1d222b;
+            opacity: 0.5;
+            font-size: 2.6rem; }
+        .project__section .project_container .project_list .sphere img {
+          display: flex;
+          flex-direction: row;
+          margin: 1rem;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          transition: 0.3s;
+          width: 25%;
+          position: relative;
+          border-radius: 20px; }
+        .project__section .project_container .project_list .sphere .img1 {
+          transform: translate(20%, -30%); }
+        .project__section .project_container .project_list .sphere .img2 {
+          transform: translate(100%, 100%); }
+        .project__section .project_container .project_list .sphere p {
+          position: relative;
+          line-break: strict;
+          width: 30%;
+          font-size: 1.3rem;
+          float: left;
+          transform: translate(115%, -295%); }

@@ -54,20 +54,20 @@
   .maingl {
     position: absolute;
     top: 30%;
-    right: 10%;
+    right: 20%;
     z-index: 15;
   }
   .bg_text {
     z-index: 4;
     position: relative;
-    right: -20%;
+    right: -10%;
     color: $color-text;
     text-align: center;
     text-transform: uppercase;
     font-family: "Big Shoulders Text", cursive;
     font-size: 3rem;
     opacity: 0.27;
-    top: 20%;
+    top: 25%;
   }
   .about {
     letter-spacing: 0.2rem;

@@ -105,11 +105,14 @@
             background-color: $color-text;
           }
         }
+        .git {
+          margin-bottom: 2rem;
+        }
       }
 
-      // .tool_container {
-      //   margin-top: 1rem;
-      // }
+      .tool_container {
+        margin-top: 1.5rem;
+      }
     }
   }
 }
