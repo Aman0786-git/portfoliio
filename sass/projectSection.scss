@@ -1,4 +1,5 @@
 @import "./color.scss";
+@import "./media_que.scss";
 
 .project__section {
   top: 100%;
@@ -6,7 +7,6 @@
   height: 100vh;
   position: relative;
   background-color: $color-pri;
-  z-index: -2;
 
   .project_text {
     letter-spacing: 0.2rem;
@@ -19,10 +19,20 @@
     text-transform: uppercase;
     left: 10%;
     top: 10%;
+    @include tablet {
+      top: 3%;
+      font-size: 2.8rem;
+    }
   }
   .project_container {
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 960 540' width='960' height='540' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='960' height='540' fill='%23869cca'%3E%3C/rect%3E%3Cg transform='translate(960 0)'%3E%3Cpath d='M322.4 -558.5C419.9 -502.2 502.2 -419.9 558.5 -322.4C614.7 -225 644.9 -112.5 644.9 0C644.9 112.5 614.7 225 558.5 322.4C502.2 419.9 419.9 502.2 322.4 558.5C225 614.7 112.5 644.9 0 644.9C-112.5 644.9 -225 614.7 -322.4 558.5C-419.9 502.2 -502.2 419.9 -558.5 322.4C-614.7 225 -644.9 112.5 -644.9 0C-644.9 -112.5 -614.7 -225 -558.5 -322.4C-502.2 -419.9 -419.9 -502.2 -322.4 -558.5C-225 -614.7 -112.5 -644.9 0 -644.9C112.5 -644.9 225 -614.7 322.4 -558.5' fill='%23a0b5e0'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center, 50%, 50%;
+    // z-index: 10000;
     height: 80vh;
-    background-color: $color-pri;
+    // background-color: $color-pri;
     height: fit-content;
     width: 100vw;
     top: 12%;
@@ -31,7 +41,13 @@
     position: relative;
     align-items: flex-start;
     padding: 1rem;
+    // z-index: 10000;
 
+    @include tablet {
+      background-position: left 51% bottom 45%;
+      // right: 0;
+      top: 5%;
+    }
     .project_list {
       width: 100vw;
       margin: 0 2rem;
@@ -47,10 +63,17 @@
           font-size: 2rem;
           font-weight: 800;
           cursor: pointer;
+
+          @include tablet {
+            font-size: 1.7rem;
+          }
           span {
             color: $color-text;
             opacity: 0.5;
             font-size: 2.6rem;
+            @include tablet {
+              font-size: 2rem;
+            }
           }
         }
         & img {
@@ -62,6 +85,8 @@
           //   height: 40%;
           border: 2px solid rgba(0, 0, 0, 0.226);
           border-radius: 20px;
+          @include tablet {
+          }
         }
         .img1 {
           float: left;
@@ -71,19 +96,40 @@
         .img2 {
           transform: translate(-22%, 20%);
           float: right;
+          @include tablet {
+            transform: translate(-60%, 50%);
+            // padding: 1rem;
+            // transform: none;
+            // float: right;
+          }
         }
         p {
           position: relative;
           line-break: strict;
           width: 55%;
           font-size: 1.3rem;
+          @include tablet {
+            width: 60%;
+            // line-break: normal;
+            font-size: 1rem;
+          }
         }
         .para1 {
           transform: translate(2%, 20%);
+          @include tablet {
+            // right: 20%;
+            transform: translate(2%, 10%);
+          }
         }
         .para2 {
           left: 23%;
           transform: translate(-8%, 50%);
+
+          @include tablet {
+            left: 10%;
+            transform: translate(-14%, 25%);
+            margin-left: 2rem;
+          }
         }
       }
 
@@ -96,6 +142,10 @@
         // background-color: $color-pri;
         // margin-right: 25rem;
         margin-top: 7%;
+        @include tablet {
+          margin-top: 9%;
+          // font-size: 1.7rem;
+        }
         &_name {
           position: relative;
           top: 7%;
@@ -106,10 +156,16 @@
           font-size: 2rem;
           font-weight: 800;
           cursor: pointer;
+          @include tablet {
+            font-size: 1.7rem;
+          }
           span {
             color: $color-text;
             opacity: 0.5;
             font-size: 2.6rem;
+            @include tablet {
+              font-size: 2rem;
+            }
           }
         }
         & img {
@@ -126,10 +182,17 @@
         .img1 {
           float: left;
           transform: translate(7%, 13%);
+          @include tablet {
+            transform: translate(-5%, 13%);
+          }
         }
 
         .img2 {
           transform: translate(30%, 60%);
+
+          @include tablet {
+            transform: translate(5%, 60%);
+          }
         }
 
         p {
@@ -137,10 +200,17 @@
           line-break: strict;
           width: 45%;
           font-size: 1.3rem;
+          @include tablet {
+            font-size: 0.8rem;
+          }
         }
 
         .para1 {
-          transform: translate(14%, 100%);
+          transform: translate(10%, 50%);
+          @include tablet {
+            font-size: 1rem;
+            transform: translate(0%, 5%);
+          }
         }
       }
       .sphere {
@@ -167,7 +237,7 @@
 
         & img {
           display: flex;
-          flex-direction: row;
+          // flex-direction: row;
           margin: 1rem;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           transition: 0.3s;
@@ -192,6 +262,9 @@
           font-size: 1.3rem;
           float: left;
           transform: translate(115%, -295%);
+          @include tablet {
+            font-size: 1rem;
+          }
         }
       }
     }

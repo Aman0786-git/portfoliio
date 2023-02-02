@@ -1,5 +1,5 @@
 @import "./color.scss";
-
+@import "./media_que.scss";
 .header {
   // top: 0;
   position: fixed;
@@ -15,7 +15,21 @@
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   font-weight: 700;
+  // background-image: url("../img/bg/bg1.svg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: bottom center, 50%, 50%;
+  @include tablet {
+    height: 3rem;
+    // position: static;
+    // background-color: $color-pri;
+  }
 
+  span {
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
   &__logo {
     padding: 0.5rem;
     margin-left: 1rem;
@@ -30,6 +44,26 @@
     display: flex;
     align-items: center;
 
+    .nav_link {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .nav_menu {
+      display: none;
+
+      @include tablet {
+        display: flex;
+      }
+      span {
+        @include tablet {
+          margin-left: 2rem;
+          // font-size: 1.5rem;
+        }
+      }
+    }
+
     .nav_item {
       // z-index: 1;
       margin: 0 0.7rem;
@@ -40,6 +74,13 @@
         font-size: 0.8rem;
         text-decoration: none;
         color: $color-text;
+        span {
+          display: none;
+          @include tablet {
+            display: flex;
+            font-size: 1.5rem;
+          }
+        }
       }
 
       &:hover {
@@ -54,10 +95,7 @@
 .glass {
   // background-color: $color-pri;
   // position: sticky;
-  background: rgba($color-head, $alpha: 0.1);
-  backdrop-filter: blur(4px);
+  background: rgba($color-pri, $alpha: 0.5);
+  backdrop-filter: blur(5px);
   border-bottom: 1.5px solid rgba($color-text, $alpha: 0.3);
 }
-
-// .sticky {
-// }

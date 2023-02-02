@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
   <link rel="stylesheet" href="./public/css/main.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,1,200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dev</title>
 </head>
@@ -22,6 +26,11 @@
       <img src="./public/favicon.svg" class="header__logo" alt="logo" />
       <span data-cursor-text="Hello!">&lt;/Aman&gt;</span>
       <ul class="nav_items">
+        <li class="nav_item">
+          <a class="nav_menu" href="#"><span class="material-symbols-rounded">
+              menu
+            </span></a>
+        </li>
         <li class="nav_item"><a class="nav_link" href="#">About</a></li>
         <li class="nav_item">
           <a class="nav_link" href="#experties">Experties</a>
@@ -32,6 +41,7 @@
         <li class="nav_item">
           <a class="nav_link" href="#contact">Contact</a>
         </li>
+
       </ul>
     </header>
     <section class="main__section" id="main">
@@ -47,7 +57,7 @@
           in the browser
         </p>
       </div>
-      <h1 class="bg_text spin_msg">Give It A Spin</h1>
+      <h1 class="bg_text spin_msg"></h1>
       <canvas class="maingl"></canvas>
     </section>
 
@@ -80,10 +90,10 @@
               <img class="skill_img" data-cursor-text="C/C++" src="./img/lang/cpp.png" alt="" srcset="" />
               <div class="progress-line"><span></span></div>
             </div>
-            <div class="skill dsa">
+            <!-- <div class="skill dsa">
               <img class="skill_img" data-cursor-text="DSA" src="./img/lang/algo.png" alt="" srcset="" />
               <div class="progress-line"><span></span></div>
-            </div>
+            </div> -->
             <div class="skill java">
               <img class="skill_img" data-cursor-text="JAVA" src="./img/lang/java.png" alt="" srcset="" />
               <div class="progress-line"><span></span></div>
@@ -110,19 +120,6 @@
     <section class="project__section" id="project">
       <h1 class="project_text">Projects</h1>
       <div class="project_container">
-        <!--
-        <div class="project">
-          <h1 class="project_name"><span>1. </span>Music Player</h1>
-          <div class="music_player">
-            <p class="pro_desc">
-              A basic music player project that I built using HTML, CSS, and
-              JavaScript. The project's main goal was to create a simple and
-              user-friendly interface for playing music.
-            </p>
-            <img class="music" src="./img/projects/music2.png" alt="" />
-          </div>
-        </div> -->
-
         <div class="project_list">
           <div class="music_player">
             <a class="music_player_name" href="https://aman0786-git.github.io/Music-Player-/" target="_blank"><span>1.
@@ -148,10 +145,10 @@
           </div>
 
           <div class="sphere">
-            <a class="sphere_name" href="https://aman0786-git.github.io/Music-Player-/" target="_blank"><span>3.
+            <a class="sphere_name" href="https://spinner3d.netlify.app/" target="_blank"><span>3.
               </span>Sphere 3D</a>
-            <img class="img2" src="./img/projects/sphere2.png" alt="">
             <img class="img1" src="./img/projects/sphere.png" alt="">
+            <img class="img2" src="./img/projects/sphere2.png" alt="">
             <p class="para1">A 3D sphere which changes color when it gets rotated by user .I have used HTML, CSS and a
               JavaScript library Three.js for this project.
             </p>
@@ -161,8 +158,26 @@
         </div>
       </div>
     </section>
-    <section class=" contact__section" id="contact">
-      <h1 class="bg_text">Page 4</h1>
+    <section class="contact__section" id="contact">
+      <div class="contact_container">
+        <h1 class="contact_text">Contact</h1>
+
+        <div class="resume">
+          <a class="cv_download"><span class="material-symbols-rounded">
+              download
+            </span>Resume</a>
+        </div>
+
+
+        <div class="contacts">
+          <a href="https://github.com/Aman0786-git" target="_blank"><img src="./img/contact/github.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/md-amnaullah-0b8b8b235/" target="_blank"><img
+              src="./img/contact/linkedin.png" alt=""></a>
+          <a href="https://www.instagram.com/aman_casm/" target="_blank"><img src="./img/contact/insta.png" alt=""></a>
+          <a href="mailto: aman999.au@gmail.com"><img src="./img/contact/mail.png" alt=""></a>
+          <!-- <a href=""><img src="./img/contact/.png" alt=""></a> -->
+        </div>
+      </div>
     </section>
   </div>
   <script type="module" src="src/controller.js"></script>
