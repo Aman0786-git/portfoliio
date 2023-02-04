@@ -8,7 +8,17 @@ const mainglEl = document.querySelector(".maingl");
 const scene = new THREE.Scene();
 
 // Create Sphere
-const geometry = new THREE.ConeGeometry(7, 7, 3, 1);
+const geometry = new THREE.ConeGeometry(5, 5, 3, 1);
+// const geo = new THREE.ConeGeometry(7, 7, 3, 1);
+
+// const mat = new THREE.MeshStandardMaterial({
+//   color: "red",
+//   roughness: 0.5,
+//   wireframe: true,
+// });
+// const mesh2 = new THREE.Mesh(geo, mat);
+// scene.add(mesh2);
+// mesh2.position.x = 14;
 
 const material = new THREE.MeshStandardMaterial({
   color: "red",
@@ -20,13 +30,13 @@ scene.add(mesh);
 
 // Sizes
 const sizes = {
-  width: window.innerWidth / 2.5,
+  width: window.innerWidth / 2,
   height: window.innerHeight / 1.8,
 };
 
-//Light
+// Light;
 // const light = new THREE.PointLight(0xffffff, 1, 100);
-// light.position.set(10, 0, 10);
+// light.position.set(0, 0, 1);
 // light.intensity = 1.25;
 // scene.add(light);
 
@@ -60,13 +70,14 @@ controls.autoRotateSpeed = 2;
 // Resize
 window.addEventListener("resize", () => {
   // Update Sizes
-  sizes.width = window.innerWidth / 2;
-  sizes.height = window.innerHeight / 2;
+  sizes.width = window.innerWidth / 2.5;
+  sizes.height = window.innerHeight / 1.8;
 
   // Update Camera
   camera.aspect = sizes.width / sizes.height;
   camera.updateProjectionMatrix();
   renderer.setSize(sizes.width, sizes.height);
+  // camera.position.z = 60;
 });
 const t1 = gsap.timeline({ defaults: { duration: 1 } });
 t1.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });

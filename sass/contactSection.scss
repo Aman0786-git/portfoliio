@@ -1,9 +1,17 @@
 @import "./color.scss";
+@import "./media_que.scss";
 .contact__section {
   position: relative;
   top: 265vh;
   width: 100vw;
   height: 70vh;
+  @include tablet {
+    top: 190vh;
+    // margin-top: 40%;
+  }
+  @include mobile {
+    top: 166%;
+  }
   .contact_container {
     padding: 4rem;
     height: 70vh;
@@ -12,6 +20,9 @@
 
     background-size: cover;
     background-position: bottom center, 50%, 50%;
+    @include mobile {
+      height: 55vh;
+    }
     .contact_text {
       letter-spacing: 0.2rem;
       opacity: 0.3;
@@ -23,6 +34,9 @@
       text-transform: uppercase;
       left: 20%;
       //   top: 10%;
+      @include tablet {
+        font-size: 2.8rem;
+      }
     }
 
     .resume {
@@ -71,6 +85,14 @@
           margin: 2rem 0.5rem;
           filter: grayscale(100%);
           //   filter: invert(60%);
+          @include tablet {
+            width: 7%;
+            filter: grayscale(0%);
+          }
+
+          @include mobile {
+            width: 10%;
+          }
 
           &:hover {
             filter: grayscale(0%);

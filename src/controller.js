@@ -14,14 +14,13 @@ Anim3d.loop();
 const containerEl = document.querySelector(".container");
 const headerEl = document.querySelector(".header");
 const glassEl = document.querySelector(".glass");
+const menuEl = document.querySelector(".nav_menu");
+const menuConatiner = document.querySelector(".menu_container");
 window.addEventListener("scroll", () => {
   const { top } = containerEl.getBoundingClientRect();
   // console.log(top);
   if (top <= -144) {
-    // if (!headerEl.classList.contains("glass")) return;
     headerEl.classList.add("glass");
-    // headerEl.classList.add("glass");
-    // headerEl.classList.add("sticky");
   } else {
     headerEl.classList.remove("glass");
   }
@@ -29,4 +28,15 @@ window.addEventListener("scroll", () => {
   // if (top <= -239) {
   //   bodyAnim.aboutAnim();
   // }
+});
+
+// Menu Container
+menuEl.addEventListener("click", (e) => {
+  menuConatiner.classList.toggle("hidden");
+  const closeEl = e.target.closest("span");
+  closeEl.textContent = closeEl.textContent != "close" ? "close" : "menu";
+  console.log(closeEl.textContent);
+  if (closeEl.textContent === "close") {
+    bodyAnim.menuAnim();
+  }
 });

@@ -3,6 +3,7 @@
 .skill__section {
   // z-index: 15;
   position: relative;
+  // overflow-y: hidden;
   // background-color: $color-pri;
   /* background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 960 540' width='960' height='540' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='960' height='540' fill='%23869cca'%3E%3C/rect%3E%3Cpath d='M766 540L770.2 522C774.3 504 782.7 468 781.7 432C780.7 396 770.3 360 772.2 324C774 288 788 252 790.3 216C792.7 180 783.3 144 776.7 108C770 72 766 36 764 18L762 0L960 0L960 18C960 36 960 72 960 108C960 144 960 180 960 216C960 252 960 288 960 324C960 360 960 396 960 432C960 468 960 504 960 522L960 540Z' fill='%23647291'%3E%3C/path%3E%3Cpath d='M859 540L861.7 522C864.3 504 869.7 468 873.5 432C877.3 396 879.7 360 877.7 324C875.7 288 869.3 252 863.2 216C857 180 851 144 850.8 108C850.7 72 856.3 36 859.2 18L862 0L960 0L960 18C960 36 960 72 960 108C960 144 960 180 960 216C960 252 960 288 960 324C960 360 960 396 960 432C960 468 960 504 960 522L960 540Z' fill='%23647291'%3E%3C/path%3E%3C/svg%3E"); */
 
@@ -20,6 +21,10 @@
     background-size: cover;
     background-position: right 0% bottom 45%;
     right: 0;
+  }
+  @include mobile {
+    right: 0;
+    height: 90vh;
   }
 
   .skill_container {
@@ -46,6 +51,9 @@
       text-transform: uppercase;
       @include tablet {
         font-size: 2.8rem;
+      }
+      @include mobile {
+        right: 0%;
       }
     }
 
@@ -80,6 +88,10 @@
             width: 2rem;
             height: 2rem;
           }
+          @include mobile {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
         }
       }
 
@@ -95,6 +107,10 @@
           font-size: 1.5rem;
           margin: 1rem 1.5rem;
         }
+        @include mobile {
+          font-size: 1.2rem;
+          // margin: 1rem 1.5rem;
+        }
       }
       .lang {
         letter-spacing: 0.1rem;
@@ -106,6 +122,10 @@
         @include tablet {
           font-size: 1.5rem;
           margin: 1rem 1.5rem;
+        }
+        @include mobile {
+          font-size: 1.2rem;
+          // margin: 1rem 1.5rem;
         }
       }
       .dev_container {

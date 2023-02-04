@@ -17,7 +17,7 @@
     top: 10%; }
     @media screen and (max-width: 768px) {
       .project__section .project_text {
-        top: 3%;
+        top: 6%;
         font-size: 2.8rem; } }
   .project__section .project_container {
     background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 960 540' width='960' height='540' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='960' height='540' fill='%23869cca'%3E%3C/rect%3E%3Cg transform='translate(960 0)'%3E%3Cpath d='M322.4 -558.5C419.9 -502.2 502.2 -419.9 558.5 -322.4C614.7 -225 644.9 -112.5 644.9 0C644.9 112.5 614.7 225 558.5 322.4C502.2 419.9 419.9 502.2 322.4 558.5C225 614.7 112.5 644.9 0 644.9C-112.5 644.9 -225 614.7 -322.4 558.5C-419.9 502.2 -502.2 419.9 -558.5 322.4C-614.7 225 -644.9 112.5 -644.9 0C-644.9 -112.5 -614.7 -225 -558.5 -322.4C-502.2 -419.9 -419.9 -502.2 -322.4 -558.5C-225 -614.7 -112.5 -644.9 0 -644.9C112.5 -644.9 225 -614.7 322.4 -558.5' fill='%23a0b5e0'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
@@ -35,10 +35,11 @@
     @media screen and (max-width: 768px) {
       .project__section .project_container {
         background-position: left 51% bottom 45%;
-        top: 5%; } }
+        top: 8%; } }
     .project__section .project_container .project_list {
       width: 100vw;
-      margin: 0 2rem; }
+      margin: 0 2rem;
+      box-sizing: border-box; }
       .project__section .project_container .project_list .music_player_name {
         position: relative;
         text-transform: uppercase;
@@ -52,6 +53,9 @@
         @media screen and (max-width: 768px) {
           .project__section .project_container .project_list .music_player_name {
             font-size: 1.7rem; } }
+        @media screen and (max-width: 450px) {
+          .project__section .project_container .project_list .music_player_name {
+            font-size: 1.3rem; } }
         .project__section .project_container .project_list .music_player_name span {
           color: #1d222b;
           opacity: 0.5;
@@ -59,6 +63,9 @@
           @media screen and (max-width: 768px) {
             .project__section .project_container .project_list .music_player_name span {
               font-size: 2rem; } }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .music_player_name span {
+              font-size: 1.5rem; } }
       .project__section .project_container .project_list .music_player img {
         display: flex;
         margin: 1rem;
@@ -67,15 +74,25 @@
         position: relative;
         border: 2px solid rgba(0, 0, 0, 0.226);
         border-radius: 20px; }
+        @media screen and (max-width: 450px) {
+          .project__section .project_container .project_list .music_player img {
+            width: 30%; } }
       .project__section .project_container .project_list .music_player .img1 {
         float: left;
         margin-top: 1rem; }
+        @media screen and (max-width: 450px) {
+          .project__section .project_container .project_list .music_player .img1 {
+            margin-left: 0; } }
       .project__section .project_container .project_list .music_player .img2 {
         transform: translate(-22%, 20%);
         float: right; }
         @media screen and (max-width: 768px) {
           .project__section .project_container .project_list .music_player .img2 {
             transform: translate(-60%, 50%); } }
+        @media screen and (max-width: 450px) {
+          .project__section .project_container .project_list .music_player .img2 {
+            transform: translate(-100%, 0%);
+            float: right; } }
       .project__section .project_container .project_list .music_player p {
         position: relative;
         line-break: strict;
@@ -85,11 +102,20 @@
           .project__section .project_container .project_list .music_player p {
             width: 60%;
             font-size: 1rem; } }
+        @media screen and (max-width: 450px) {
+          .project__section .project_container .project_list .music_player p {
+            line-break: loose;
+            width: 70%; } }
       .project__section .project_container .project_list .music_player .para1 {
         transform: translate(2%, 20%); }
         @media screen and (max-width: 768px) {
           .project__section .project_container .project_list .music_player .para1 {
             transform: translate(2%, 10%); } }
+        @media screen and (max-width: 450px) {
+          .project__section .project_container .project_list .music_player .para1 {
+            display: inline-block;
+            left: 0;
+            transform: translate(0%, 0%); } }
       .project__section .project_container .project_list .music_player .para2 {
         left: 23%;
         transform: translate(-8%, 50%); }
@@ -98,6 +124,9 @@
             left: 10%;
             transform: translate(-14%, 25%);
             margin-left: 2rem; } }
+        @media screen and (max-width: 450px) {
+          .project__section .project_container .project_list .music_player .para2 {
+            display: none; } }
       .project__section .project_container .project_list .razer {
         position: relative;
         width: 100vw;
@@ -107,6 +136,9 @@
         @media screen and (max-width: 768px) {
           .project__section .project_container .project_list .razer {
             margin-top: 9%; } }
+        @media screen and (max-width: 450px) {
+          .project__section .project_container .project_list .razer {
+            margin-top: 2%; } }
         .project__section .project_container .project_list .razer_name {
           position: relative;
           top: 7%;
@@ -120,13 +152,17 @@
           @media screen and (max-width: 768px) {
             .project__section .project_container .project_list .razer_name {
               font-size: 1.7rem; } }
+          @media screen and (max-width: 768px) {
+            .project__section .project_container .project_list .razer_name {
+              font-size: 1.3rem;
+              left: -30%; } }
           .project__section .project_container .project_list .razer_name span {
             color: #1d222b;
             opacity: 0.5;
             font-size: 2.6rem; }
             @media screen and (max-width: 768px) {
               .project__section .project_container .project_list .razer_name span {
-                font-size: 2rem; } }
+                font-size: 1.5rem; } }
         .project__section .project_container .project_list .razer img {
           display: flex;
           margin: 1rem;
@@ -136,17 +172,26 @@
           height: 45%;
           position: relative;
           border-radius: 20px; }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .razer img {
+              width: 50%; } }
         .project__section .project_container .project_list .razer .img1 {
           float: left;
           transform: translate(7%, 13%); }
           @media screen and (max-width: 768px) {
             .project__section .project_container .project_list .razer .img1 {
               transform: translate(-5%, 13%); } }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .razer .img1 {
+              transform: translate(-20%, 20%); } }
         .project__section .project_container .project_list .razer .img2 {
           transform: translate(30%, 60%); }
           @media screen and (max-width: 768px) {
             .project__section .project_container .project_list .razer .img2 {
               transform: translate(5%, 60%); } }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .razer .img2 {
+              transform: translate(30%, 20%); } }
         .project__section .project_container .project_list .razer p {
           position: absolute;
           line-break: strict;
@@ -155,8 +200,13 @@
           @media screen and (max-width: 768px) {
             .project__section .project_container .project_list .razer p {
               font-size: 0.8rem; } }
+          @media screen and (max-width: 768px) {
+            .project__section .project_container .project_list .razer p {
+              display: inline-block;
+              width: 70%;
+              margin-top: 1rem; } }
         .project__section .project_container .project_list .razer .para1 {
-          transform: translate(10%, 50%); }
+          transform: translate(10%, 70%); }
           @media screen and (max-width: 768px) {
             .project__section .project_container .project_list .razer .para1 {
               font-size: 1rem;
@@ -174,22 +224,44 @@
           font-weight: 800;
           text-align: start;
           cursor: pointer; }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .sphere_name {
+              font-size: 1.3rem;
+              top: 30%; } }
           .project__section .project_container .project_list .sphere_name span {
             color: #1d222b;
             opacity: 0.5;
             font-size: 2.6rem; }
+            @media screen and (max-width: 450px) {
+              .project__section .project_container .project_list .sphere_name span {
+                font-size: 1.3rem; } }
         .project__section .project_container .project_list .sphere img {
-          display: flex;
+          display: block;
           margin: 1rem;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           transition: 0.3s;
-          width: 25%;
+          width: 23%;
           position: relative;
           border-radius: 20px; }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .sphere img {
+              width: 30%; } }
         .project__section .project_container .project_list .sphere .img1 {
-          transform: translate(20%, -30%); }
+          transform: translate(-150%, 72%); }
+          @media screen and (max-width: 768px) {
+            .project__section .project_container .project_list .sphere .img1 {
+              transform: translate(8%, 85%); } }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .sphere .img1 {
+              transform: translate(-20%, 85%); } }
         .project__section .project_container .project_list .sphere .img2 {
-          transform: translate(100%, 100%); }
+          transform: translate(300%, -10%); }
+          @media screen and (max-width: 768px) {
+            .project__section .project_container .project_list .sphere .img2 {
+              transform: translate(245%, 25%); } }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .sphere .img2 {
+              transform: translate(135%, 0%); } }
         .project__section .project_container .project_list .sphere p {
           position: relative;
           line-break: strict;
@@ -199,4 +271,9 @@
           transform: translate(115%, -295%); }
           @media screen and (max-width: 768px) {
             .project__section .project_container .project_list .sphere p {
-              font-size: 1rem; } }
+              font-size: 1rem;
+              transform: translate(105%, -220%); } }
+          @media screen and (max-width: 450px) {
+            .project__section .project_container .project_list .sphere p {
+              width: 70%;
+              transform: translate(0%, 0%); } }

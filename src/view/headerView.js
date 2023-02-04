@@ -47,6 +47,14 @@ class bodyAnim {
       { x: "0", opacity: 1, duration: 1.3 }
     );
   }
+  menuAnim() {
+    const t3 = gsap.timeline({});
+    t3.fromTo(
+      ".menu_container",
+      { opacity: 0 },
+      { opacity: 1, ease: "ease-in", duration: 1.5 }
+    );
+  }
 }
 
 export default new bodyAnim();
